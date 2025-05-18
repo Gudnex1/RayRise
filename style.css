@@ -1,0 +1,84 @@
+@layer base {
+  :root {
+    --grnclr: rgb(0, 214, 124);
+    --bgclr: #ffffff;
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding-left: 0;
+  }
+  body {
+    background-color: var(--bgclr);
+    color: black;
+    line-height: 1.6;
+    font-family: "Dosis", sans-serif;
+  }
+}
+@layer nav {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+  nav ul li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  .button {
+    flex-shrink: 0;
+  }
+  .btn {
+    border: 1px solid;
+    flex-direction: column;
+    padding-inline: 12px;
+    padding-block: 7px;
+  }
+  .button :first-child {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 5px;
+  }
+  .button :last-child {
+    border-color: rgb(35, 160, 35);
+    border-radius: 20px;
+    background-color: var(--grnclr);
+    color: var(--bgclr);
+  }
+}
+@layer main {
+    .img {
+        margin-inline: 10px;
+    }
+  .img img {
+    height: 700px;
+    width: 100%;
+    clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 67%,
+      60% 67%,
+      60% 100%,
+      0 100%,
+      0 0
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+  }
+}
